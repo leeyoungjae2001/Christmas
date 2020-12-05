@@ -1,0 +1,123 @@
+/* 애니메이션 */
+@keyframes myScale {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}@keyframes nameScale {
+  0% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+#fullCoverSection input[id*="slide"]{
+  display: none;
+}
+#fullCoverSection{
+  width: 100%;
+  height: 100%;
+}
+#fullCoverSection .slidewrap{
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+#fullCoverSection .slidelist{
+  width: 100%;
+  height: 100%;
+  white-space: nowrap;
+  font-size: 0;
+}
+#fullCoverSection .slidelist > li{
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  vertical-align: middle;
+  width: 100%;
+  transition: all .5s;
+}
+#fullCoverSection .slidelist > li > a{
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+#fullCoverSection .slidelist > li > a > div .black-layer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#fullCoverSection .slidelist > li > a > div span{
+  color: #fff;
+  font-size: 8rem;
+  animation: myScale 1s;
+  margin-bottom: 20px;
+}
+#fullCoverSection .slidelist > li > a > div p{
+  color: #fff;
+  font-size: 2rem;
+  animation: myScale 1s;
+  text-align: center;
+}
+.bg1{
+  width: 100%;
+  height: 100%;
+  background: url("../img/bg1.jpg") no-repeat center / cover ;
+}
+.bg2{
+  width: 100%;
+  height: 100%;
+  background: url("../img/bg2.jpg") no-repeat center / cover ;
+}
+.bg3{
+  width: 100%;
+  height: 100%;
+  background: url("../img/bg3.jpg") no-repeat center / cover ;
+}
+.bg4{
+  width: 100%;
+  height: 100%;
+  background: url("../img/bg4.jpg") no-repeat center / cover ;
+}
+#fullCoverSection .slidelist label{
+  position: absolute;
+  z-index: 10;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 50px;
+  cursor: pointer;
+}
+#fullCoverSection .slidelist .left{
+  left: 30px;
+  opacity: 1;
+  background: url("../img/left.png") center center / 100% no-repeat;
+}
+#fullCoverSection .slidelist .right{
+  right: 30px;
+  opacity: 1;
+  background: url("../img/rigth.png") center center / 100% no-repeat;
+}
+
+#fullCoverSection [id="slide0"]:checked ~ .slidewrap .slidelist > li span{animation: myScale 1s;}
+#fullCoverSection [id="slide1"]:checked ~ .slidewrap .slidelist > li span{animation: myScale 1s;}
+#fullCoverSection [id="slide2"]:checked ~ .slidewrap .slidelist > li span{animation: myScale 1s;}
+#fullCoverSection [id="slide3"]:checked ~ .slidewrap .slidelist > li span{animation: myScale 1s;}
+
+.animation-fade {
+  opacity: 1;
+  padding-top: 0;
+  transition: all 1s;
+}.animation-init {
+  opacity: 0;
+  padding-top: 1em;
+}
+.aaa{
+  animation: myScale 1s;
+}
