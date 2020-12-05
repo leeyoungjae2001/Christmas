@@ -95,14 +95,24 @@
   cursor: pointer;
 }
 #fullCoverSection .slidelist .left{
+  transition: opacity 0.5s;
   left: 30px;
-  opacity: 1;
+  opacity: 0.2;
   background: url("../img/left.png") center center / 100% no-repeat;
 }
 #fullCoverSection .slidelist .right{
+  transition: opacity 0.5s;
   right: 30px;
-  opacity: 1;
+  opacity: 0.2;
   background: url("../img/rigth.png") center center / 100% no-repeat;
+}
+#fullCoverSection .slidelist .left:hover{
+  transition: opacity 0.5s;
+  opacity: 0.5;
+}
+#fullCoverSection .slidelist .right:hover{
+  transition: opacity 0.5s;
+  opacity: 0.5;
 }
 
 #fullCoverSection [id="slide0"]:checked ~ .slidewrap .slidelist > li span{animation: myScale 1s;}
