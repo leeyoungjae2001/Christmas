@@ -25,8 +25,8 @@ window.onload = function () {
     }
   }
 
-  var body = document.getElementsByTagName("body");
-  body[0].addEventListener("mousewheel", function(delta){
+  var body = document.getElementById("fullCoverSection");
+  body.addEventListener("mousewheel", function(delta){
     if(delta.wheelDelta >= 0){
       var slidelist = document.getElementsByClassName("slidelist");
       var targets = slidelist[0].getElementsByTagName("li");
@@ -48,7 +48,8 @@ window.onload = function () {
     }
   })
 
-  body[0].onclick = function(a){
+  body.onclick = function(a){
+    console.log(`${a.clientX} ${window.innerWidth}`)
     if(a.clientX < innerWidth/2){
       var slidelist = document.getElementsByClassName("slidelist");
       var targets = slidelist[0].getElementsByTagName("li");
